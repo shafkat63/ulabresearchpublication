@@ -127,13 +127,13 @@
           @enderror
         </div>
         <div class="mb-6">
-          <label for="Document" class="inline-block text-lg mb-2">
+          <label for="document" class="inline-block text-lg mb-2">
             Document
           </label>
-          <input type="file" class="border border-gray-200 rounded p-2 w-full" name="Document" />
+          <input type="file" class="border border-gray-200 rounded p-2 w-full" name="document" />
 
-          @error('logo')
-          <p class="text-red-500 text-xs mt-1">{{$Document}}</p>
+          @error('document')
+          <p class="text-red-500 text-xs mt-1">{{$message}}</p>
           @enderror
         </div>
 

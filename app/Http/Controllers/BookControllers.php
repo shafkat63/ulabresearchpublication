@@ -9,15 +9,22 @@ class BookControllers extends Controller
 {
     //
 
+    public function show(BookChapter $singleBook)
+    {
+        return view('Forms.bookShow', [
+            'singleBook' => $singleBook
+        ]);
+    }
     public function createBookPost(Request $request)
     {
 
         // dd($request);
+        // dd($request->file('document'));
         $incomingFields = $request->validate(
             [
                 "TitlePaper" => "required",
                 "Author" => "required",
-                
+
                 "bookName" => "required",
                 "chapterTitle" => "required",
                 "issue" => "required",
@@ -30,7 +37,16 @@ class BookControllers extends Controller
 
             ]
         );
+
+        if ($request->hasFile('document')) {
+
+
+            // dd($request->file('document'));
+            $incomingFields['document'] = $request->file('document')->store('documents', 'public');
+        }
+
+        $incomingFields['user_id'] = auth()->id();
         BookChapter::create($incomingFields);
-        return redirect('/something');
+        return back()->with('message', 'Post has been Created successfully!');
     }
 }

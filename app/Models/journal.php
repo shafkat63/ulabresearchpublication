@@ -24,7 +24,13 @@ class journal extends Model
         "publisher",
         "DOI",
         "URL",
-        "document"
+        "document",
+        'user_id'
 
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

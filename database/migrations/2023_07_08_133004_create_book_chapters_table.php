@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('book_chapters', function (Blueprint $table) {
             $table->id();
             $table->string('TitlePaper');
-            // $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('Author');
             $table->string('bookName');
             $table->string('chapterTitle');
@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('PublicationYear');
             $table->string('PublicationDate');
             $table->string('BookPublisher');
+            $table->string('document')->nullable();
             $table->string('DOI');
             $table->string('URL');
 

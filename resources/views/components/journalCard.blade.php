@@ -11,7 +11,7 @@
       <div class="text-xl font-bold mb-4">{{$journal->journalName}}</div>
       {{-- <x-listing-tags :tagsCsv="$listing->tags" /> --}}
       <div class="text-lg mt-4">
-        <i class="fa-solid fa-location-dot"></i> {{$journal->publisher}}
+        <i class="fa-solid fa-mug-hot"></i> {{$journal->publisher}}
       </div>
     </div>
   </div>

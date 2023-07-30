@@ -21,7 +21,15 @@ class BookChapter extends Model
         "PublicationDate",
         "BookPublisher",
         "DOI",
-        "URL"
+        "URL",
+        "document",
+        'user_id'
 
     ];
+
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
