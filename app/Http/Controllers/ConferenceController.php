@@ -31,6 +31,7 @@ class ConferenceController extends Controller
             ]
 
         );
+        $incomingFields['user_id'] = auth()->id(); 
         conference::create($incomingFields);
         // return redirect('/something');
         return back()->with('message', 'Post has been Created successfully!');

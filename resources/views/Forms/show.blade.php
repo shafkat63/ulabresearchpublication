@@ -25,7 +25,7 @@
 
         <h2 class="text-xl  mb-4">DOI: {{$singleJournal->DOI}}</h2>
         <h2 class="text-xl  mb-4">publisher: {{$singleJournal->publisher}}</h2>
-
+        <h2 class="text-xl  mb-4">User: {{$singleJournal->user->name}} </h2>
 
         {{--
         <x-listing-tags :tagsCsv="$listing->tags" /> --}}
