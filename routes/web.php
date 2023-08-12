@@ -54,7 +54,7 @@ Route::get('/', function () {
     // $all = journal::join('BookChapter')->get();
     $journals = journal::latest()->paginate(8);
     $bookChapters = BookChapter::latest()->paginate(8);
-    $conferencePapers = conference::all();
+    $conferencePapers = conference::latest()->paginate(8);
     // $conferencePapers::conference::all();
     // $users = User::join('journals', 'journals.user_id', '=', 'users.id')->join("BookChapter", "book_chapters.user_id", "=", "users.id")->get();
 //    return dd($users);
