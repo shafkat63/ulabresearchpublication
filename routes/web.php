@@ -79,6 +79,9 @@ Route::get('/journal/{singleJournal}', [JournalController::class, 'show']);
 
 Route::get('/bookchapter/{singleBook}', [BookControllers::class, 'show']);
 
+Route::get('/conferencePaper/{singleConferencePaper}', [ConferenceController::class, 'show']);
+
+
 // Route::get('/', function () {
 //     return view('index');
 // });

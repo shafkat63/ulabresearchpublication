@@ -1,8 +1,11 @@
 <x-layout>
   <x-card class="p-10 max-w-lg mx-auto mt-24">
-    <a href="/conference">Conference paper/proceeding</a>
+    <header class="text-center">
+      <h2 class="text-2xl font-semibold uppercase mb-4">Journal Artical</h2>
+      {{-- <p class="mb-4">Post a gig to find a developer</p> --}}
+    </header>
     <div class="w-full max-w-xs place-items-center pl-10">
-      <h1>Journal article</h1>
+      
       <form action="/createJournalartical" class="w-full max-w-lg" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-6">

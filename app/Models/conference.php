@@ -9,23 +9,28 @@ class conference extends Model
 {
     use HasFactory;
 
-    // protected $fillable = [
-    //     "TitlePaper",
-    //     "Author",
-    //     "conferenceAcronym",
-    //     "conferenceLocation",
-    //     "DOI",
-    //     "URL",
-    //     "bookSeries",
-    //     "volume",
-    //     "issue",
-    //     "publicationYear",
-    //     "publicationDate",
-    //     "publisher",
+    protected $fillable = [
+        "TitlePaper",
+        "Author",
+        'conferenceName',
+        "conferenceAcronym",
+        "conferenceLocation",
+        "DOI",
+        "URL",
+        "bookSeries",
+        "volume",
+        "issue",
+        "publicationYear",
+        "publicationDate",
+        "publisher",
+        'document',
+        'user_id'
 
-    // ];
+    ];
 
-    protected $guarded = [];
+
+
+    // protected $guarded = [];
 
     public function user()
     {

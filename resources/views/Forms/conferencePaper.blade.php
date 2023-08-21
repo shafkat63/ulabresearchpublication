@@ -1,9 +1,11 @@
 <x-layout>
   <x-card class="p-10 max-w-lg mx-auto mt-24">
-    <a href="/">Book Chapter</a>
-
+    <header class="text-center">
+      <h2 class="text-2xl font-semibold uppercase mb-4">Conference Paper</h2>
+      {{-- <p class="mb-4">Post a gig to find a developer</p> --}}
+    </header>
     <div class="w-full max-w-xs place-items-center pl-10">
-      <form action="/createConferencePaper" class="w-full max-w-sm" method="POST">
+      <form action="/createConferencePaper" class="w-full max-w-sm" method="POST" enctype="multipart/form-data" >
         @csrf
         <div class="mb-6">
           <label for="TitlePaper" class="inline-block text-lg mb-2">Title of the paper</label>

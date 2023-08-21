@@ -7,7 +7,14 @@ use Illuminate\Http\Request;
 
 class ConferenceController extends Controller
 {
-    //
+    
+    public function show(conference $singleConferencePaper)
+    {
+        return view('Forms.conferencePaperShow', [
+            'singleConferencePaper' => $singleConferencePaper
+        ]);
+    }
+
     public function createConferencePaper(Request $request)
     {
         // dd($request);
@@ -31,6 +38,12 @@ class ConferenceController extends Controller
             ]
 
         );
+        if ($request->hasFile('document')) {
+
+
+            // dd($request->file('document'));
+            $incomingFields['document'] = $request->file('document')->store('documents', 'public');
+        }
         $incomingFields['user_id'] = auth()->id(); 
         conference::create($incomingFields);
         // return redirect('/something');

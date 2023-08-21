@@ -27,8 +27,7 @@ return new class extends Migration
             $table->string('publicationYear');
             $table->string('publicationDate');
             $table->string('publisher');
-
-
+            $table->string('document')->nullable();
             $table->timestamps();
         });
     }

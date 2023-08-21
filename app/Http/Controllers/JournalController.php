@@ -24,14 +24,14 @@ class JournalController extends Controller
         $incomingFields = $request->validate(
             [
                 "TitlePaper" => "required",
-                "Author" => "required",
-                "journalName" => ["required"],
-                "issue" => "required",
+                "Author" => "required|max:200",
+                "journalName" => "required|max:200",
+                "issue" => "required|max:200",
                 "volume" =>  ["nullable"],
                 "publicationYear" => "required",
                 "publicationDate" => "required",
-                "publisher" => "required",
-                "DOI" => "required",
+                "publisher" => "required|max:200",
+                "DOI" => "required|max:200",
                 "URL" => "required",
                 // 'document' => 'nullable'
 

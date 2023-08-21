@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('TitlePaper');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('Author');
+            $table->longText('Author');
             $table->string('journalName');
             $table->string('issue');
             $table->string('volume')->nullable();

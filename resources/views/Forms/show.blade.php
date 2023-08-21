@@ -7,28 +7,62 @@
         <img class="w-48 mr-6 mb-6"
           src="{{$singleJournal->document ? asset('storage/' . $singleJournal->document) : asset('/images/logo.png')}}"
           alt="" />
-        <h3 class="text-2xl mb-2">
+        <div class="flex flex-row gap-1">
+          <h2 class="text-xl mb-4 font-semibold">Title Paper:</h2>
+          <h2 class="text-xl mb-4">{{$singleJournal->TitlePaper}}</h2>
+        </div>
 
-        </h3>
-        TitlePaper: <p class="text-lg"> {{$singleJournal->TitlePaper}}</p>
+        <div class="flex flex-row gap-1">
+          <h2 class="text-xl mb-4 font-semibold">Author:</h2>
+          <h2 class="text-xl mb-4">{{$singleJournal->Author}}</h2>
+        </div>
 
-        <h2 class="text-xl mb-4">Author: {{$singleJournal->Author}}</h2>
-        <h2 class="text-xl  mb-4">Journal Name: {{$singleJournal->journalName}}</h2>
+        <div class="flex flex-row gap-1">
+          <h2 class="text-xl mb-4 font-semibold">Journal Name:</h2>
+          <h2 class="text-xl mb-4"> {{$singleJournal->journalName}}</h2>
+        </div>
+        <div class="flex flex-row gap-1">
+          <h2 class="text-xl mb-4 font-semibold">Issue:</h2>
+          <h2 class="text-xl mb-4"> {{$singleJournal->issue}}</h2>
+        </div>
 
-        <h2 class="text-xl  mb-4">Issue: {{$singleJournal->issue}}</h2>
 
-        <h2 class="text-xl  mb-4">volume: {{$singleJournal->volume}}</h2>
+        <div class="flex flex-row gap-1">
+          <h2 class="text-xl mb-4 font-semibold">Volume:</h2>
+          <h2 class="text-xl mb-4"> {{$singleJournal->volume}}</h2>
+        </div>
 
-        <h2 class="text-xl  mb-4">publicationYear: {{$singleJournal->publicationYear}}</h2>
 
-        <h2 class="text-xl  mb-4">publicationDate: {{$singleJournal->publicationDate}}</h2>
+        <div class="flex flex-row gap-1">
+          <h2 class="text-xl mb-4 font-semibold">Publication Year:</h2>
+          <h2 class="text-xl mb-4"> {{$singleJournal->publicationYear}}</h2>
+        </div>
 
-        <h2 class="text-xl  mb-4">DOI: {{$singleJournal->DOI}}</h2>
-        <h2 class="text-xl  mb-4">publisher: {{$singleJournal->publisher}}</h2>
-        <h2 class="text-xl  mb-4">User: {{$singleJournal->user->name}} </h2>
 
-        {{--
-        <x-listing-tags :tagsCsv="$listing->tags" /> --}}
+        <div class="flex flex-row gap-1">
+          <h2 class="text-xl mb-4 font-semibold">Publication Date:</h2>
+          <h2 class="text-xl mb-4"> {{$singleJournal->publicationDate}}</h2>
+        </div>
+        <div class="flex flex-row gap-1">
+          <h2 class="text-xl mb-4 font-semibold">DOI:</h2>
+          <h2 class="text-xl mb-4"> {{$singleJournal->DOI}}</h2>
+        </div>
+
+
+        <div class="flex flex-row gap-1">
+          <h2 class="text-xl mb-4 font-semibold">Publisher:</h2>
+          <h2 class="text-xl mb-4"> {{$singleJournal->publisher}}</h2>
+        </div>
+
+
+        <div class="flex flex-row gap-1">
+          <h2 class="text-xl mb-4 font-semibold"><i class="fa-solid fa-user"></i> User:</h2>
+          <h2 class="text-xl mb-4"> {{$singleJournal->user->name}}</h2>
+        </div>
+        <div class="flex flex-row gap-1">
+          <h2 class="text-xl mb-4 font-semibold">Status:</h2>
+          <h2 class="text-xl mb-4"> {{$singleJournal->status}}</h2>
+        </div>
 
         <div class="text-lg my-4">
           <i class="fa-solid fa-location-dot"></i> {{$singleJournal->url}}
