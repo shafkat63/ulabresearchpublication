@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('document')->nullable();
             $table->string('DOI');
             $table->string('URL');
-
+            $table->enum('status', ['Processing', 'Approve', 'Review','Reject','Forward To Account','Draft']);
             $table->timestamps();
         });
     }

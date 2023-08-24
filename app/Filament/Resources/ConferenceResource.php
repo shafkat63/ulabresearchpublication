@@ -23,7 +23,23 @@ class ConferenceResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('TitlePaper')->required(),
+                Forms\Components\TextInput::make('user_id')->required(),
+                Forms\Components\TextInput::make('Author')->required(),
+                Forms\Components\TextInput::make('conferenceName')->required(),
+                Forms\Components\TextInput::make('conferenceAcronym')->required(),
+                Forms\Components\TextInput::make('conferenceLocation')->required(),
+                Forms\Components\TextInput::make('DOI')->required(),
+                Forms\Components\TextInput::make('URL')->required(),
+                Forms\Components\TextInput::make('bookSeries')->required(),
+                Forms\Components\TextInput::make('issue')->required(),
+                Forms\Components\TextInput::make('URL')->required(),
+                Forms\Components\TextInput::make('volume')->required(),
+                Forms\Components\TextInput::make('publicationYear')->required(),
+                Forms\Components\TextInput::make('publicationDate')->required(),
+                Forms\Components\TextInput::make('publisher')->required(),
+                Forms\Components\FileUpload::make('document')->directory('documents'),
+
             ]);
     }
 
@@ -31,7 +47,7 @@ class ConferenceResource extends Resource
     {
         return $table
             ->columns([
-                
+
                 Tables\Columns\TextColumn::make('TitlePaper'),
                 Tables\Columns\TextColumn::make('user_id'),
                 Tables\Columns\TextColumn::make('Author'),
@@ -60,14 +76,14 @@ class ConferenceResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -75,5 +91,5 @@ class ConferenceResource extends Resource
             'create' => Pages\CreateConference::route('/create'),
             'edit' => Pages\EditConference::route('/{record}/edit'),
         ];
-    }    
+    }
 }

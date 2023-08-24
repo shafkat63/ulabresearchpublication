@@ -2,11 +2,10 @@
   <x-card class="p-10 max-w-lg mx-auto mt-24">
     <header class="text-center">
       <h2 class="text-2xl font-semibold uppercase mb-4">Journal Artical</h2>
-      {{-- <p class="mb-4">Post a gig to find a developer</p> --}}
     </header>
-    <div class="w-full max-w-xs place-items-center pl-10">
+    {{-- <div class="w-full max-w-xs place-items-center pl-10"> --}}
       
-      <form action="/createJournalartical" class="w-full max-w-lg" method="POST" enctype="multipart/form-data">
+      <form action="/createJournalartical" class="w-full max-w-lg px-12" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-6">
           <label for="TitlePaper" class="inline-block text-lg mb-2">Title of the Article</label>
@@ -138,8 +137,8 @@
 
       </form>
 
-    </div>
-    <div class="">
+    {{-- </div> --}}
+    
 
 
   </x-card>

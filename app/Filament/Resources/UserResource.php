@@ -28,7 +28,9 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('email')->email()->required(),
                 Forms\Components\TextInput::make('password')
                     ->password()
-                    ->dehydrateStateUsing(fn ($state) => Hash::make($state))
+                    ->dehydrateStateUsing(fn ($state) => Hash::make($state)),
+                Forms\Components\FileUpload::make('photo')->directory('documents'),
+
 
             ]);
     }
@@ -39,6 +41,7 @@ class UserResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\ImageColumn::make('photo')
             ])
             ->filters([
                 //

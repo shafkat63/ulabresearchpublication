@@ -4,7 +4,6 @@
 
     <header class="text-center">
       <h2 class="text-2xl font-semibold  uppercase mb-4">Book Publishing</h2>
-      {{-- <p class="mb-4">Post a gig to find a developer</p> --}}
     </header>
 
 
